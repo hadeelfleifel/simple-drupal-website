@@ -27,5 +27,6 @@ Our project build with :
 - html5.
 - css.
 - jquery.
+- Media Query.
 - jQuery UI (User Interface).
 And we use (https://fontawesome.com/,https://fonts.google.com/) to make it more creative.
