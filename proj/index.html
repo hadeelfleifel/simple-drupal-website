@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>To DO List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Kalam&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  </head>
+  <body>
+      <div class='loader'></div>
+    <div class="container">
+      <div class="header">
+        <pre>Organize Your Life
+                Work and Schedule
+      </pre>
+    </div>
+      <div class="blank"></div>
+      <div class="input">
+      <input type="text" maxlength="30" class="txtb" placeholder="Add a task">
+      </div>
+      <div>
+          <h3>Not Completed</h3>
+          <hr>
+        <div class="notcomp" >
+
+
+          
+        </div>
+      </div>
+      <div>
+          <h3 class="green-color">Completed</h3>
+          <hr>
+        <div class="comp">
+          
+        </div>
+      </div>
+    </div>
+
+
+    <script type="text/javascript">
+    
+    // $(window).load(function () {
+    //     setTimeout(function () {
+    //        $('.loader').fadeOut();
+    //         start();
+    //     }, 3000);
+    // });
+    // $(window).load(function () {
+    // var count=0;
+    //     var counter=setInterval(function(){
+    //         if (count<101) {
+    //             $('.count').text(count+'%');
+    //             $('.loader').css('width',count+'%');
+    //             count++;
+    //         }
+    //         else{
+    //             clearInterval(counter)
+    //         }
+    //     },10)
+    //   });
+
+    $(document).ready(function(){
+    $(".notcomp").sortable();
+    $(".comp").sortable();
+    
+ 
+      $(".txtb").on("keyup",function(e){
+        //13  means enter button
+        if(e.keyCode == 13 && $(".txtb").val() != "")
+        {
+          var task = $("<div class='task'></div>").text($(".txtb").val());
+          var del = $("<i class='fas fa-trash-alt'></i>").click(function(){
+            var p = $(this).parent();
+            p.fadeOut(function(){
+              p.remove();
+            });
+          });
+
+          var check = $("<i class='fas fa-check'></i>").click(function(){
+            var p = $(this).parent();
+            p.fadeOut(function(){
+              $(".comp").append(p);
+              p.fadeIn();
+            });
+            $(this).remove();
+          });
+
+          task.append(del,check);
+          $(".notcomp").append(task);
+            //to clear the input
+          $(".txtb").val("");
+        }
+      });
+    });
+    </script>
+
+  </body>
+</html>

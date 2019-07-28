@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise #2: Changing colors</title>
+    <style>
+        #mydiv {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+        }
+    </style>
+
+    <script>
+    	var arr=['blue','red','green'];
+        function mouseClick() {
+
+
+  document.getElementsByTagName("div")[0].style.background= arr[ Math.floor(Math.random()* arr.length)];
+
+}
+
+
+    </script>
+</head>
+<body>
+<div id="mydiv" onclick="mouseClick()" ></div>
+</body>
+</html>

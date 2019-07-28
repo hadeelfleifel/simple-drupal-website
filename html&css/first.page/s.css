@@ -1,0 +1,35 @@
+.s{background-color: #b8d2fc;font-family: 'Indie Flower', cursive;
+}
+.f{font-family: Sans-serif;text-align:center;}
+.cc{border: 3px #000 solid;display: block;margin: 0 auto;}
+.ff{font-family: Sans-serif;}
+.fs{font-size: 32px;}
+.rr:hover{color: green;}
+.art{margin-right: 50px;margin-left: 50px}
+
+
+a::after {
+  content: "\03C6";}
+}
+a:active {
+  color: red;
+}
+.exciting-text::after {
+  content: " <- EXCITING!"; 
+  color: green;
+}
+
+.boring-text::after {
+  content: " <- BORING";
+  color: red;
+}
+.box {
+  background: pink;
+  height: 80px;
+  width: 80px;
+}
+
+.box:empty
+ {
+  background: lime;
+}

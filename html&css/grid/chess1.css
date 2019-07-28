@@ -1,0 +1,32 @@
+.parent {
+	display: grid;
+	grid-template-columns: repeat(8,1fr);
+	width: 800px;
+}
+.black> div  nth-child(odd){
+	display: grid;
+	height: 100px;
+	background-color: black;
+	border:2px solid black;
+
+}
+.black> div{
+	display: grid;
+	height: 100px;
+	background-color: white;
+	border:2px solid black;
+}
+.white<div nth-child(odd){
+	display:grid;
+	height: 100px;
+	background-color: black;
+	border:2px solid black;
+
+}
+.white<div {
+	display: grid;
+	height: 100px;
+	background-color: white;
+	border:2px solid black;
+
+}
